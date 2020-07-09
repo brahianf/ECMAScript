@@ -44,3 +44,49 @@ let education = ['Ant', ...team1,...team2]
 console.log(education)
 
 // var let const
+
+let name = 'Brahian';
+let age = '26';
+
+// ES5
+// obj = { name : name , age : age}
+
+// ES6
+obj2 = { name, age};
+// console.log(obj2)
+
+const names = [
+    {name: 'Brahian', age: '26'},
+    {name: 'felipe', age: '32'}
+]
+// función anonima
+let listOfNames = names.map(function (item) {
+    console.log(item.name)
+})
+
+// Arrow Functions
+let listOfNames2= names.map(item => console.log(item.name));
+
+const listOfNames3 = (name, age, country) => {
+}
+
+const listOfNames4 = name => {
+}
+
+const square = num => num * num;
+
+// Promesas... Algo va a pasar en algún momento
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if(true){
+            resolve('Hey!');
+        } else {
+            reject('Noo');
+        }
+    });
+}
+
+helloPromise()
+    .then(response => console.log(response))
+    .then(() => console.log('Hola'))
+    .catch(error => console.log(error))
