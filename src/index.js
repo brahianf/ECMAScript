@@ -90,3 +90,45 @@ helloPromise()
     .then(response => console.log(response))
     .then(() => console.log('Hola'))
     .catch(error => console.log(error))
+
+// Clases
+    class calculator {
+    // metodo para inicializar clase
+    constructor(){
+        // variables disponibles en scope global
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+    sum(valueA,valueB) {
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+}
+
+const calc = new calculator();
+console.log(calc.sum(2,8))
+
+// modulos
+// import {hello}  from './module.js'
+const hello = require ('./module')
+console.log(hello());
+
+
+// Generadores
+// funcion especial que retorna una serie de valores según el algoritmo definido
+function* helloWorld() {
+    if (true){
+        // Yield guarda este estado de forma interna
+        yield 'Hello, ';
+
+    }
+    if (true) {
+        yield 'World'
+    }
+};
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value)
+console.log(generatorHello.next().value)
+console.log(generatorHello.next().value)
