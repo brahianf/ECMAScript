@@ -22,3 +22,25 @@ let epic= hello + ' ' + world;
 let epic2= `${hello} ${world}`
 console.log(epic2)
 
+
+let lorem = `lorem consequetur. commodi. Ipsum vel
+                Otra frase
+            `
+
+let person = {
+    'name': 'Brahian',
+    'age': 23,
+    'country': 'CO'
+}
+// Desestructurar Elementos que se necesitan
+let { name, age,} = person;
+console.log(name,age)
+
+// Operador de propagación
+let team1 = ['Oscar','Brahian','Felipe']
+let team2 = ['fel','Bra','Era']
+
+let education = ['Ant', ...team1,...team2]
+console.log(education)
+
+// var let const
